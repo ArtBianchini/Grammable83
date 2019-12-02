@@ -46,7 +46,6 @@ gem 'bootstrap-sass', '~> 3.2.0'
 # gem 'capistrano-rails', group: :development
 gem 'popper_js', '~> 1.11.1'
 gem 'bootstrap', '4.0.0.alpha6'
-end 
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
