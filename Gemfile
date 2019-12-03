@@ -27,6 +27,7 @@ gem 'jquery-rails'
 
 gem 'simple_form'
 
+gem 'devise'
 group :doc do 
 
   gem 'sdoc', require: false
