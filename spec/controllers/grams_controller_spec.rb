@@ -32,7 +32,7 @@ RSpec.describe GramsController, type: :controller do
 
       it "should succesfully create a new gram in our database" do 
        user = FactoryBot.create(:user)
-
+       sign_in user
 
       post :create, params: { gram: { message: 'Hello!' } }
       expect(response).to redirect_to root_path
