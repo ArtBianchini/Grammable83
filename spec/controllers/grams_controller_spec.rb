@@ -16,14 +16,13 @@ RSpec.describe GramsController, type: :controller do
       expect(response).to redirect_to new_user_session_path
     end
 
-     it "should allow a user to destroy grams" do
-        gram = FactoryBot.create(:gram)
-        sign_in gram.user
-        delete :destroy, params: { id: gram.id }
-        expect(response).to redirect_to root_path
-        gram = Gram.find_by_id(gram.id)
-        expect(gram).to eq nil 
-     end
+    it "should allow a user to destroy grams" do
+      gram = FactoryBot.create(:gram)
+      delete :destroy, params: { id: gram.id }
+      expect(response).to redirect_to root_path
+      gram = Gram.find_by_id(gram.id)
+      expect(gram).to eq nil
+    end
 
      it "should return a 404 message if we cannot find a gram with the id that is specified" do 
         user = FactoryBot.create(:user)
