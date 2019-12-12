@@ -7,8 +7,6 @@ class GramsController < ApplicationController
 
   def new
     @gram = Gram.new
-    <%= f.input :picture %>
-  end
 end 
 
   def create
